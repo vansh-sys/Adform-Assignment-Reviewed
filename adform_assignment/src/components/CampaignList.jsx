@@ -127,12 +127,10 @@ export class CampaignList extends React.Component {
         <br />
         <div className="ag-theme-balham ag-grid-custom">
           <AgGridReact
+            suppressHorizontalScroll={false}
             columnDefs={columnDefs}
             rowData={rowData}
             frameworkComponents={frameworkComponents}
-            suppressHorizontalScroll
-            false
-            colResizeDefault
           />
         </div>
 
