@@ -122,12 +122,7 @@ const campaignListReducer = (state = initialState, action) => {
         });
 
         users.map((user) => {
-          campaignList.map((campaign) => {
-            if (campaign.userId === user.id) {
-              campaign.userName = user.name;
-            }
-            return true;
-          });
+          campaignList.find((campaign) => (campaign.userId === user.id)).userName = user.name;
           return true;
         });
 
