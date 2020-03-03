@@ -14,7 +14,7 @@ import addFormLogo from '../logos/addform.png';
 import SearchBox from './SearchBox';
 import Translations from '../translations/constants';
 import selectCampaignUsers from '../Selectors/selectors';
-import ComponentWithLoading from './GridWithLoader';
+import ComponentWithLoading from './WithLoader';
 
 export class CampaignList extends React.Component {
   constructor() {
