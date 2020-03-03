@@ -27,9 +27,15 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'react/prop-types': 'off',
     'no-unused-expressions': 'off',
-    'linebreak-style': 0,
-    'global-require': 0,
+    'linebreak-style': 'off',
+    'global-require': 'off',
     'eslint linebreak-style': [0, "error", "windows"],
-    'react/destructuring-assignment': 'off'
+    'react/destructuring-assignment': 'off',
+    'react/jsx-props-no-spreading' : 'off',
+    'react/jsx-filename-extension' : 'off',
+    'no-undef' : 'off',
+    'no-param-reassign' : 'off',
+    'max-len' : 'off'
+
   },
 };

@@ -1,11 +1,10 @@
-/* eslint-disable max-len */
-/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import { connect } from 'react-redux';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham.css';
 import { AgGridReact } from 'ag-grid-react';
 import DatePicker from 'react-date-picker';
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import {
   fetchCampaigns, searchByName, prepareRowData, filterByDate, addNewCampaigns,
 } from '../actions/campaignActions';
@@ -15,6 +14,7 @@ import addFormLogo from '../logos/addform.png';
 import SearchBox from './SearchBox';
 import Translations from '../translations/constants';
 import selectCampaignUsers from '../Selectors/selectors';
+import ComponentWithLoading from './GridWithLoader';
 
 export class CampaignList extends React.Component {
   constructor() {
@@ -88,7 +88,7 @@ export class CampaignList extends React.Component {
     const frameworkComponents = {
       statusRederer: StatusRederer,
     };
-    // this.gridApi.sizeColumnsToFit();
+    const GridLoader = ComponentWithLoading(AgGridReact);
     return (
       <div>
         <header className="header">
@@ -126,15 +126,8 @@ export class CampaignList extends React.Component {
         <br />
         <br />
         <div className="ag-theme-balham ag-grid-custom">
-          <AgGridReact
-            columnDefs={columnDefs}
-            rowData={rowData}
-            frameworkComponents={frameworkComponents}
-            suppressHorizontalScroll
-            false
-          />
+          <GridLoader isLoading={this.props.isLoading} columnDefs={columnDefs} rowData={rowData} frameworkComponents={frameworkComponents} suppressHorizontalScroll false />
         </div>
-
       </div>
 
     );

@@ -1,11 +1,8 @@
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable no-undef */
 import React from 'react';
 import { shallow, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { CampaignList } from '../components/CampaignList';
-import { mockStore } from '../mocks/mock_store';
+import mockStore from '../mocks/mock_store';
 
 configure({ adapter: new Adapter() });
 

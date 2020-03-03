@@ -1,15 +1,15 @@
-/* eslint-disable linebreak-style */
 import Translations from '../translations/constants';
 
 export const fetchCampaigns = () => async (dispatch) => {
   const Actions = Translations.actions;
   let users = [];
-  // eslint-disable-next-line no-undef
+  let isLoading = true;
   fetch('https://jsonplaceholder.typicode.com/users')
     .then((res) => res.json())
     .then((data) => {
       users = data;
-      dispatch({ type: Actions.fetchCampaigns, payload: users });
+      isLoading = false;
+      dispatch({ type: Actions.fetchCampaigns, payload: { users, isLoading } });
     })
     .catch((error) => error);
 };

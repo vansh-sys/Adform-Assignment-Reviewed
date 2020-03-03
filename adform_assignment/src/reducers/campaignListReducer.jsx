@@ -1,5 +1,3 @@
-/* eslint-disable no-param-reassign */
-/* eslint-disable linebreak-style */
 import moment from 'moment';
 
 const initialState = {
@@ -96,8 +94,8 @@ const campaignListReducer = (state = initialState, action) => {
       if (action.payload) {
         state = {
           ...state,
-          isLoading: false,
-          userList: action.payload,
+          isLoading: action.payload.isLoading,
+          userList: action.payload.users,
         };
       }
       return state;

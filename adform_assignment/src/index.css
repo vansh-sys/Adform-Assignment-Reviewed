@@ -80,3 +80,9 @@ left:136px;
   top: 70px;
   left: 57px;
 }
+
+.loader{
+  position: relative;
+  top: 220px;
+  left: 550px;
+}
