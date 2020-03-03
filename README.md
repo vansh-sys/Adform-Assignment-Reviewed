@@ -1,4 +1,25 @@
-################################## ADFORM ASSIGNMENT ###################################################
+################################## ADFORM ASSIGNMENT ##################################
+
+About Assignment : A simple react application that shows a list of campaigns that can be filtered by campaign name and by date (using a date range selector).
+
+Basic Coverage Includes:
+
+A list of Campaign which shows
+    # The Name 
+    #The startDate 
+    #The endDate 
+    #A flag to state if the Campaign is active (a campaign is running when the current date is inside the start-end date range) 
+    #The Budget (in USD dollar) User name (can be , if the user's data is missing for specified userId) Unknown user 
+    #A Search Form before the list in order to filter the list by Campaign Name 
+    #A DateRange component that filters the list of campaigns based on a Start and End Date. 
+        #If the campaign has a startDate that is contained in the range, it should show 
+        #If the campaign has an endDate that is contained in the range, it should show. 
+        #User is able to select an end-date that is before the start-date. If the endDate is before the start Date, the campaign should not show.
+
+External API
+
+https://jsonplaceholder.typicode.com/users
+
 
 ## Available Scripts
 
